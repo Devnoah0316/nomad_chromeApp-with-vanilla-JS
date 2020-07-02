@@ -3,7 +3,26 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos';
-const toDos = [];
+let toDos = [];
+
+function deleteToDo(event){
+    // click된 span태그를 반환하여 btn에 대입
+    const btn = event.target;
+    // btn의 부모노드 li에 대입
+    const li = btn.parentNode;
+    // toDoList의 자손들중 해당하는 li 삭제
+    toDoList.removeChild(li);
+    
+    // 모든 toDos가 li의 id와 같지 않을 때
+    const cleanToDos = toDos.filter(function(toDo){
+        //li.id는 string 이기 때문에 int로 변환
+        return toDo.id !== parseInt(li.id);
+    });
+
+    toDos = cleanToDos;
+    saveToDos();
+
+}
 
 function saveToDos(){
     // JSON.stringify -> 자바스크립트 object를 string으로 
@@ -15,6 +34,7 @@ function paintToDo(text){
     const li = document.createElement("li");
     // buttont 생성
     const delBtn = document.createElement("button");
+    delBtn.addEventListener("click", deleteToDo);
     // local stroage에도 todo를 저장하기 위해 id 부여
     const newId = toDos.length + 1;
     delBtn.innerText = "❌";
