@@ -15,10 +15,11 @@ function deleteToDo(event){
     
     // 모든 toDos가 li의 id와 같지 않을 때
     const cleanToDos = toDos.filter(function(toDo){
-        //li.id는 string 이기 때문에 int로 변환
+        // 삭제된 요소를 제외하고 나머지 요소를 다시 새로운 배열에 저장
+        // li.id는 string이기 때문에 int로 변환
         return toDo.id !== parseInt(li.id);
     });
-
+    // 새로운 배열을 다시 원래 배열에 대입 
     toDos = cleanToDos;
     saveToDos();
 
