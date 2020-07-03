@@ -1,6 +1,6 @@
 const toDoForm = document.querySelector(".js-to-do"),
-    toDoInput = toDoForm.querySelector(".js-add-to-do"),
-    toDoList = document.querySelector(".js-toDoList");
+    toDoInput = document.querySelector(".js-add-to-do"),
+    toDoList = document.querySelector(".js-list");
 
 const TODOS_LS = 'toDos';
 let toDos = [];
@@ -33,19 +33,21 @@ function saveToDos(){
 function paintToDo(text){
     // empty li를 생성
     const li = document.createElement("li");
-    // buttont 생성
-    const delBtn = document.createElement("button");
-    delBtn.addEventListener("click", deleteToDo);
+    li.className = "toDo";
     // local stroage에도 todo를 저장하기 위해 id 부여
     const newId = toDos.length + 1;
-    delBtn.innerText = "❌";
-    // span을 생성
-    const span = document.createElement("span");
-    span.innerText = text;
+    // span 생성
+    const delBtn = document.createElement("span");
+    delBtn.innerHTML = "❌";
+    delBtn.className = "toDo__button";
+    delBtn.addEventListener("click", deleteToDo);
+    
+    const label = document.createElement("label");
+    label.innerText = text;
     // li의 자손으로 delBtn을 삽입
     li.appendChild(delBtn);
     // li의 자손으로 span을 삽입
-    li.appendChild(span);
+    li.appendChild(label);
     // li id 설정
     li.id = newId;
     // toDoList의 자손으로 li삽입
