@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
 body,
 html {
   overflow: hidden;
@@ -53,6 +55,7 @@ input {
 
 input::placeholder {
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 input:focus,
@@ -91,6 +94,10 @@ body{
         opacity: 1;
     }
 }
+.name__text{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .bgImage{
     position: absolute;

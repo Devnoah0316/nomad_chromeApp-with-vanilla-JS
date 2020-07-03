@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 .list {
   margin-bottom: 20px;
 }
 
 .toDo {
   font-size: 22px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .toDo__button {
