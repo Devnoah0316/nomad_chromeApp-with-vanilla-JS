@@ -11,8 +11,9 @@ function getWeather(lat, lng){
         return response.json();
     }).then(function(json){
         const temperature = json.main.temp;
+        const sky_status = json.weather[0].main;
         const place = json.name;
-        weather.innerText = `${Math.floor(temperature)}° @  ${place}`;
+        weather.innerText = ` ${sky_status} in ${place}, ${Math.floor(temperature)}°   `;
     })
 }
 
