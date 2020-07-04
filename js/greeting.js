@@ -1,6 +1,7 @@
 const nameContainer = document.querySelector("#js-name");
 const greetText = document.querySelector('#js-greet-text');
 const nameText = document.querySelector('#js-name');
+history.replaceState({}, null, location.pathname);
 
 function getHours(){
     const now = new Date();
