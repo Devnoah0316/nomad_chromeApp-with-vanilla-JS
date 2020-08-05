@@ -2,9 +2,9 @@
 
 > learned about basic vanilla javascript
 
-### 🏠 [Homepage](https://devnoah0316.github.io/nomad_chromeApp-with-vanilla-JS/)
+### 🏠 [Homepage](https://noah0316.github.io/nomad_chromeApp-with-vanilla-JS/)
 
-### ✨ [Demo](https://devnoah0316.github.io/nomad_chromeApp-with-vanilla-JS/)
+### ✨ [Demo](https://noah0316.github.io/nomad_chromeApp-with-vanilla-JS/)
 
 ## Author
 
